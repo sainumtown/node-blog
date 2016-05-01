@@ -1,7 +1,18 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title Node blog
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		.container
+			nav
+				li
+					a(href='/') Home
+				li
+					a(href='/posts/add') Add Post
+				li
+					a(href='/categories/add') Add Category
+			!= messages()
+			block content
+			footer
+				p Nodeblog @copy; 2016
